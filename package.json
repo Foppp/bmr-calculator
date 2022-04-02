@@ -2,8 +2,8 @@
   "name": "bmr-calculator",
   "version": "1.0.0",
   "description": "Calculate your Basal Metabolic Rate",
-  "engines" : { 
-    "node" : "17.x"
+  "engines": {
+    "node": "17.x"
   },
   "scripts": {
     "start": "webpack -w --mode development",
@@ -38,6 +38,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "devDependencies": {
-    "@emotion/babel-plugin": "^11.7.2"
+    "@emotion/babel-plugin": "^11.7.2",
+    "webpack-node-externals": "^3.0.0"
   }
 }
