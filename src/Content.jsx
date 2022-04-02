@@ -25,7 +25,6 @@ const backText = css`
   animation: ${trackingIn} 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 `;
 
-
 const Content = () => {
   return (
     <div className='container d-flex flex-column justify-content-center align-items-center'>
@@ -33,7 +32,11 @@ const Content = () => {
         <div className='col mt-5'>
           <div className='row align-items-center justify-content-center'>
             <div className='col-sm-6 col-md-6 col-lg-4'>
-              <img className='img-fluid' src='../public/food1_shadow.png' alt='food1' />
+              <img
+                className='img-fluid'
+                src='../public/food1_shadow.png'
+                alt='food1'
+              />
             </div>
             <div className='col-sm-6 col-md-6 col-lg-8'>
               <h1 className='text-white'>
@@ -54,17 +57,15 @@ const Content = () => {
             </div>
           </div>
           <div className='row align-items-center justify-content-center mt-5'>
-            <div className="col">
-            <h6>
-              Calculate your Basal Metabolic Rate - Adjust your BMR to include
-              physical activity - Choose your food based on daily calorie needs
-              - Start a food journal - Cut calories to lose weight - Increase
-              calories to gain weight{' '}
-            </h6>
-          </div>
-            <div className="col">
-              learn more
-          </div>
+            <div className='col'>
+              <h6>
+                Calculate your Basal Metabolic Rate - Adjust your BMR to include
+                physical activity - Choose your food based on daily calorie
+                needs - Start a food journal - Cut calories to lose weight -
+                Increase calories to gain weight{' '}
+              </h6>
+            </div>
+            <div className='col'>learn more</div>
           </div>
         </div>
       </div>
