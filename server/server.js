@@ -57,12 +57,11 @@ app.get('*', async (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 3000
-console.log(process.env.PORT)
+const PORT = process.env.PORT
 const start = async () => {
   try {
     await app.listen(PORT);
-    console.log(`Server running on port ${app.server.address().port}`)
+    console.log(`Server running on port ${PORT}`)
   } catch (err) {
     console.log(err)
     app.log.error(err)
