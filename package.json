@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "Calculate your Basal Metabolic Rate",
   "engines": {
+    "npm": "8.x",
     "node": "17.x"
   },
   "scripts": {
-    "build-client": "webpack --mode=production --config webpack.client.js",
-    "build-server": "webpack --mode=production --config webpack.server.js",
-    "start": "node ./server/index.js",
-    "build": "rm -rf dist && npm run build-client && npm run build-server",
+    "build-client": "NODE_ENV=production webpack --mode=production --config webpack.client.js",
+    "build-server": "NODE_ENV=production webpack --mode=production --config webpack.server.js",
+    "prebuild": "rm -rf dist",
+    "start": "node dist/server.js",
+    "build": "npm run build-client && npm run build-server",
     "nodemon": "nodemon dist/server.js",
     "watch:frontEnd": "webpack -w --mode=development --config webpack.client.js",
     "watch:backEnd": "webpack -w --mode=development --config webpack.server.js",
