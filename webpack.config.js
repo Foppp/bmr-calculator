@@ -18,12 +18,12 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'main.js',
   },
-  devServer: {
-    port: 3000,
-    static: {
-      directory: './dist',
-    },
-  },
+  // devServer: {
+  //   port: 3000,
+  //   static: {
+  //     directory: './dist',
+  //   },
+  // },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
