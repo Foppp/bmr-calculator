@@ -2,6 +2,9 @@
   "name": "bmr-calculator",
   "version": "1.0.0",
   "description": "Calculate your Basal Metabolic Rate",
+  "engines" : { 
+    "node" : "17.x"
+  },
   "scripts": {
     "start": "webpack -w --mode development",
     "build": "NODE_ENV=production npx webpack --mode production"
