@@ -15,6 +15,7 @@
     "watch:backEnd": "webpack -w --mode=development --config webpack.server.js",
     "startAll": "npm-run-all -p nodemon watch:frontEnd watch:backEnd"
   },
+  "heroku-run-build-script": true,
   "keywords": [],
   "author": "",
   "license": "ISC",
