@@ -6,7 +6,7 @@ import createEmotionServer from '@emotion/server/create-instance';
 import createCache from '@emotion/cache';
 import { renderToString } from 'react-dom/server';
 import React from 'react';
-import App from '../src/App';
+import App from '../src/App.jsx';
 import fastifyStatic from 'fastify-static';
 // import serveStatic from 'serve-static';
 

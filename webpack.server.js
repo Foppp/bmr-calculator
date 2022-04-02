@@ -1,37 +1,14 @@
 const path = require('path');
-
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const Dotenv = require('dotenv-webpack');
-
-const mode = process.env.NODE_ENV || 'development';
+const webpackNodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  mode,
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
-  entry: {
-    main: './src/index.js',
-  },
+  target: 'node',
+  entry: './server/index.js',
+  externals: [webpackNodeExternals()],
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/',
-    filename: 'main.js',
+    filename: 'server.js',
+    path: path.resolve(__dirname, './dist'),
   },
-  // devServer: {
-  //   port: 3000,
-  //   static: {
-  //     directory: './dist',
-  //   },
-  // },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-    }),
-    // new Dotenv({
-    //   path: path.resolve(__dirname,'.env')
-    // }),
-  ],
   module: {
     rules: [
       {

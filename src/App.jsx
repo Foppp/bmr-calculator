@@ -1,9 +1,9 @@
 import React from 'react';
 /** @jsx jsx */
 import { jsx, css, keyframes } from '@emotion/react';
-import Navbar from './Navbar';
-import Content from './Content';
-import Footer from './Footer';
+import Navbar from './Navbar.jsx';
+import Content from './Content.jsx';
+import Footer from './Footer.jsx';
 
 // const bounce = keyframes`
 //   from, 20%, 53%, 80%, to {

@@ -6,8 +6,10 @@
     "node": "17.x"
   },
   "scripts": {
-    "start": "webpack -w --mode development",
-    "build": "NODE_ENV=production npx webpack --mode production"
+    "build-client": "webpack --mode=production --config webpack.client.js",
+    "build-server": "webpack --mode=production --config webpack.server.js",
+    "build": "npm run build-client && npm run build-server",
+    "server": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
