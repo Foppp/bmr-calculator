@@ -58,7 +58,7 @@ app.get('*', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000
-
+console.log(process.env.PORT)
 const start = async () => {
   try {
     await app.listen(PORT);

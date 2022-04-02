@@ -25,9 +25,6 @@ const backText = css`
   animation: ${trackingIn} 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 `;
 
-// const cont = css`
-//   background: url('./food1_shadow.png') ;
-// `;
 
 const Content = () => {
   return (
