@@ -25,7 +25,18 @@ const html = renderToString(
 const chunks = extractCriticalToChunks(html);
 const styles = constructStyleTagsFromChunks(chunks);
 
-app.get('/*', async (req, res) => {
+app.register(fastifyStatic, {
+  root: path.join(__dirname, '../dist'),
+  prefix: '/dist/',
+});
+
+app.register(fastifyStatic, {
+  root: path.join(__dirname, '../public'),
+  prefix: '/public/',
+  decorateReply: false,
+});
+
+app.get('*', async (req, res) => {
   const indexFile = path.resolve('./dist/index.html');
   const appHtml = renderToString(<App />);
 
@@ -46,4 +57,16 @@ app.get('/*', async (req, res) => {
   });
 });
 
-app.listen(5000);
+const PORT = process.env.PORT || 5000
+
+const start = async () => {
+  try {
+    await app.listen(PORT);
+    console.log(`Server running on port ${PORT}`)
+  } catch (err) {
+    console.log(err)
+    app.log.error(err)
+    process.exit(1)
+  }
+}
+start();

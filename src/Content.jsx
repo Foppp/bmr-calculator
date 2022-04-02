@@ -1,7 +1,7 @@
 import React from 'react';
 /** @jsx jsx */
 import { jsx, css, keyframes } from '@emotion/react';
-import food1 from './assets/img/food1_shadow.png';
+import food from './food1_shadow.png'
 const trackingIn = keyframes`
   0% {
     letter-spacing: 0.4em;
@@ -26,8 +26,7 @@ const backText = css`
 `;
 
 const cont = css`
-  position: absolute;
-  z-index: 2;
+  background: url('./food1_shadow.png') ;
 `;
 
 const Content = () => {
@@ -37,7 +36,8 @@ const Content = () => {
         <div className='col mt-5'>
           <div className='row align-items-center justify-content-center'>
             <div className='col-sm-6 col-md-6 col-lg-4'>
-              <img className='img-fluid' src={food1} alt='food1' />
+              <div css={cont}>sdsdasdsad</div>
+              <img className='img-fluid' src='../public/food1_shadow.png' alt='food1' />
             </div>
             <div className='col-sm-6 col-md-6 col-lg-8'>
               <h1 className='text-white'>

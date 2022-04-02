@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Calculate your Basal Metabolic Rate",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack -w --mode development",
     "build": "NODE_ENV=production npx webpack --mode production"
   },
   "keywords": [],

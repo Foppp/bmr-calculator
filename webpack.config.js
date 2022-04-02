@@ -15,17 +15,16 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist',
-    filename: 'main.js'
+    publicPath: '/dist/',
+    filename: 'main.js',
   },
   devServer: {
-    port: 5000,
+    port: 3000,
     static: {
       directory: './dist',
     },
   },
   plugins: [
-    // new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
@@ -43,7 +42,6 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          // { loader: MiniCssExtractPlugin.loader },
           { loader: 'style-loader' },
           {
             loader: 'css-loader',
@@ -51,15 +49,17 @@ module.exports = {
               url: true,
             },
           },
-          // { loader: 'postcss-loader' },
-          // { loader: 'sass-loader' },
         ],
       },
       {
         test: /\.(png|svg|jpe?g|gif)$/,
-        use: [
-          { loader: 'file-loader' },
-        ],
+        use: {
+          loader: 'file-loader',
+          options: {
+            limit: 8192,
+            name: '[name].[ext]',
+          },
+        },
       },
     ],
   },
