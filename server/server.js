@@ -60,7 +60,7 @@ app.get('*', async (req, res) => {
 const PORT = process.env.PORT || 5000;
 const start = async () => {
   try {
-    await app.listen(PORT);
+    await app.listen(PORT, '0.0.0.0');
     console.log(`Server running on port ${PORT}`);
   } catch (err) {
     console.log(err);
