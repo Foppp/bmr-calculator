@@ -3,9 +3,8 @@ import React from 'react';
 import { jsx, css, keyframes } from '@emotion/react';
 
 const data = [
-  { id: 1, name: 'first', img: 'https://www.clipartmax.com/png/middle/124-1241243_healthy-food-png-transparent-free-images-healthy-food-clipart-transparent.png' },
+  { id: 1, name: 'first', img: 'https://www.pngmart.com/files/7/Fresh-Healthy-Food-PNG-Transparent.png' },
   { id: 2, name: 'second', img: 'https://www.pngmart.com/files/7/Fresh-Healthy-Food-PNG-Transparent.png' },
-  { id: 3, name: 'third', img: 'https://www.clipartmax.com/png/middle/124-1241243_healthy-food-png-transparent-free-images-healthy-food-clipart-transparent.png' },
 ]
 const trackingIn = keyframes`
   0% {
@@ -45,7 +44,7 @@ const Content = () => {
             </div>
             <div className='col-sm-6 col-md-6 col-lg-8'>
               <h1 className='text-white'>
-              11 Find out your daily calorie need and choose the right meal
+               Find out your daily calorie need and choose the right meal
               </h1>
               <h5 className='text-dark'>
                 Our bodies are like engines that are constantly running. They're
