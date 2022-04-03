@@ -15,8 +15,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/',
-    filename: 'main.js',
+    publicPath: '/assets/',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -51,9 +50,18 @@ module.exports = {
           loader: 'file-loader',
           options: {
             limit: 8192,
-            name: '[name].[ext]',
+            name: 'assets/[name].[ext]',
           },
         },
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
       },
     ],
   },

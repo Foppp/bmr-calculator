@@ -10,6 +10,7 @@ import App from '../src/App.jsx';
 import fastifyStatic from 'fastify-static';
 
 const app = fastify();
+
 const key = 'custom';
 const cache = createCache({ key });
 const { extractCriticalToChunks, constructStyleTagsFromChunks } =
@@ -26,7 +27,7 @@ const styles = constructStyleTagsFromChunks(chunks);
 
 app.register(fastifyStatic, {
   root: path.join(__dirname, '../dist'),
-  prefix: '/dist/',
+  prefix: '/assets/',
 });
 
 app.register(fastifyStatic, {

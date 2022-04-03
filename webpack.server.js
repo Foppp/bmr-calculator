@@ -30,13 +30,24 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpe?g|gif)$/,
+        include: /assets/,
         use: {
           loader: 'file-loader',
           options: {
             limit: 8192,
-            name: '[name].[ext]',
+            name: 'assets/[name].[ext]',
           },
         },
+        test: /\.(png|jpg|gif)$/i,
+        include: /assets/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
       },
     ],
   },
