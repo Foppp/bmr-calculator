@@ -8,7 +8,6 @@ import { renderToString } from 'react-dom/server';
 import React from 'react';
 import App from '../src/App.jsx';
 import fastifyStatic from 'fastify-static';
-// import serveStatic from 'serve-static';
 
 const app = fastify();
 const key = 'custom';
