@@ -26,8 +26,13 @@ const Navbar = () => {
               </a>
             </li>
             <li className='nav-item'>
+              <a className='nav-link' style={{color: '#56B9F7FC'}} href='#'>
+                Calculator
+              </a>
+            </li>
+            <li className='nav-item'>
               <a className='nav-link' href='#'>
-                Link
+                About
               </a>
             </li>
           </ul>
