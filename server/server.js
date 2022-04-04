@@ -1,9 +1,8 @@
+
 import path from 'path';
 import fs from 'fs';
 import fastify from 'fastify';
 import { CacheProvider } from '@emotion/react';
-// import createEmotionServer from '@emotion/server/create-instance';
-// import createCache from '@emotion/cache';
 import { renderToString } from 'react-dom/server';
 import React from 'react';
 import App from '../src/App.jsx';
