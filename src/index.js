@@ -9,8 +9,8 @@ import App from './App';
 const cache = createCache({key: 'my-prefix-key'});
 
 hydrate(
-  <CacheProvider value={cache}>
-    <App />
-  </CacheProvider>,
+  // <CacheProvider value={cache}>
+    <App />,
+  // </CacheProvider>,
   document.getElementById('root')
 );
