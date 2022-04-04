@@ -2,8 +2,8 @@ import path from 'path';
 import fs from 'fs';
 import fastify from 'fastify';
 import { CacheProvider } from '@emotion/react';
-import createEmotionServer from '@emotion/server/create-instance';
-import createCache from '@emotion/cache';
+// import createEmotionServer from '@emotion/server/create-instance';
+// import createCache from '@emotion/cache';
 import { renderToString } from 'react-dom/server';
 import React from 'react';
 import App from '../src/App.jsx';
@@ -33,11 +33,11 @@ const start = async () => {
     prefix: '/public/',
   });
 
-  app.register(fastifyStatic, {
-    root: path.join(__dirname, '../dist'),
-    prefix: '/assets/',
-    decorateReply: false,
-  });
+  // app.register(fastifyStatic, {
+  //   root: path.join(__dirname, '../dist'),
+  //   prefix: '/assets/',
+  //   decorateReply: false,
+  // });
 
   app.get('*', async (req, res) => {
     // const indexFile = path.resolve('./dist/index.html');

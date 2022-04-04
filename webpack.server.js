@@ -29,6 +29,30 @@ module.exports = {
         ],
       },
       {
+        test: /\.(scss)$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: function () {
+                  return [require('autoprefixer')];
+                },
+              },
+            },
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
+      },
+      {
         test: /\.(png|svg|jpe?g|gif)$/,
         include: /assets/,
         use: {

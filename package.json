@@ -10,9 +10,9 @@
     "build-client": "NODE_ENV=production webpack --mode=production --config webpack.client.js",
     "build-server": "NODE_ENV=production webpack --mode=production --config webpack.server.js",
     "prebuild": "rm -rf dist",
-    "start": "node server/index.js",
+    "start": "node dist/server.js",
     "build": "npm run build-client && npm run build-server",
-    "nodemon": "nodemon server/index.js",
+    "nodemon": "nodemon dist/server.js",
     "watch:frontEnd": "webpack -w --mode=development --config webpack.client.js",
     "watch:backEnd": "webpack -w --mode=development --config webpack.server.js"
   },
