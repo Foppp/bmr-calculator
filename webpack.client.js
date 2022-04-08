@@ -17,10 +17,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/assets/',
   },
-  // plugins: [
-  //   new HtmlWebpackPlugin({
-  //     template: './public/index.html',
-  //   }),
   //   // new Dotenv({
   //   //   path: path.resolve(__dirname,'.env')
   //   // }),
@@ -45,7 +41,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(scss)$/,
+        test: /\.s[ac]ss$/i,
         use: [
           {
             loader: 'style-loader',
@@ -77,15 +73,6 @@ module.exports = {
             name: 'assets/[name].[ext]',
           },
         },
-        test: /\.(png|jpg|gif)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-            },
-          },
-        ],
       },
     ],
   },

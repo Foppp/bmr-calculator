@@ -17,19 +17,7 @@ module.exports = {
         use: 'babel-loader',
       },
       {
-        test: /\.css$/i,
-        use: [
-          { loader: 'style-loader' },
-          {
-            loader: 'css-loader',
-            options: {
-              url: true,
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(scss)$/,
+        test: /\.s[ac]ss$/i,
         use: [
           {
             loader: 'style-loader',
@@ -62,16 +50,6 @@ module.exports = {
             name: 'assets/[name].[ext]',
           },
         },
-        test: /\.(png|jpg|gif)$/i,
-        include: /assets/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-            },
-          },
-        ],
       },
     ],
   },

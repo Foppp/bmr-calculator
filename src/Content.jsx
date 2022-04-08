@@ -4,32 +4,37 @@ import { jsx, css, keyframes } from '@emotion/react';
 
 const trackingIn = keyframes`
   0% {
-    letter-spacing: 3.8em;
+    letter-spacing: 6.8em;
     opacity: 0;
-  }
-  40% {
-    opacity: 10%;
   }
   100% {
     letter-spacing: normal;
     opacity: 25%;
   }
 `;
-
+const getStarted = css`
+  background-color: #FAE077;
+`;
+const iconAbout = css`
+  width: 75px;
+  height: 75px;
+  align-content: center;
+  background-color: #C1E6B8;
+`;
 const backText = css`
   color: transparent;
-  font-size: calc(10vw + 4vh + 4vmin);
+  font-size: calc(4vw + 2vh + 2vmin);
   -webkit-text-stroke: 1px #fafaf0;
-  animation: ${trackingIn} 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: ${trackingIn} 1.8s both;
 `;
 
 const Content = () => {
   return (
     <div className='container d-flex flex-column justify-content-center align-items-center'>
       <div className='container justify-content-center text-center'>
+      <h1 css={backText}>BasalMetabolicRate</h1>
         <div className='col mt-5'>
           <div className='row align-items-center justify-content-center'>
-            <h1 css={backText}>BMR</h1>
             <div className='col-sm-6 col-md-6 col-lg-4'>
               <img
                 className='img-fluid'
@@ -47,14 +52,100 @@ const Content = () => {
                 number of calories you burn each day simply by being alive.
               </h5>
               <div className='col'>
-                <button className='btn btn-warning mt-3 px-5 shadow-sm rounded-pill'>
+                <button className='btn mt-3 px-5 shadow-sm rounded-pill' css={getStarted}>
                   Get Started
                 </button>
               </div>
             </div>
           </div>
-          <div className='row'>fddd</div>
           <div className='row align-items-center justify-content-center mb-5'>
+            <div className="icon-about card border align-items-center justify-content-center rounded-circle shadow-lg" css={iconAbout}>
+            <svg
+                    width='40'
+                    height='40'
+                    viewBox='0 0 60 60'
+                    fill='none'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <g id='Combo Chart' clipPath='url(#clip0_202_187)'>
+                      <path
+                        id='Vector'
+                        d='M22.8285 26.2817L37.1722 13.7192'
+                        stroke='white'
+                        strokeWidth='2.50185'
+                        strokeMiterlimit='10'
+                      />
+                      <path
+                        id='Vector_2'
+                        d='M7.76587 17.5322L17.2346 26.2197'
+                        stroke='white'
+                        strokeWidth='2.50185'
+                        strokeMiterlimit='10'
+                      />
+                      <path
+                        id='Vector_3'
+                        d='M40.0004 15.0007C42.0714 15.0007 43.7504 13.3218 43.7504 11.2507C43.7504 9.17966 42.0714 7.50073 40.0004 7.50073C37.9293 7.50073 36.2504 9.17966 36.2504 11.2507C36.2504 13.3218 37.9293 15.0007 40.0004 15.0007Z'
+                        stroke='white'
+                        strokeWidth='2.50185'
+                        strokeMiterlimit='10'
+                      />
+                      <path
+                        id='Vector_4'
+                        d='M5.00055 18.7505C7.07162 18.7505 8.75055 17.0716 8.75055 15.0005C8.75055 12.9294 7.07162 11.2505 5.00055 11.2505C2.92948 11.2505 1.25055 12.9294 1.25055 15.0005C1.25055 17.0716 2.92948 18.7505 5.00055 18.7505Z'
+                        stroke='white'
+                        strokeWidth='2.50185'
+                        strokeMiterlimit='10'
+                      />
+                      <path
+                        id='Vector_5'
+                        d='M20.0004 32.5005C22.0715 32.5005 23.7504 30.8216 23.7504 28.7505C23.7504 26.6794 22.0715 25.0005 20.0004 25.0005C17.9293 25.0005 16.2504 26.6794 16.2504 28.7505C16.2504 30.8216 17.9293 32.5005 20.0004 32.5005Z'
+                        stroke='white'
+                        strokeWidth='2.50185'
+                        strokeMiterlimit='10'
+                      />
+                      <path
+                        id='Vector_6'
+                        d='M43.0003 13.501L52.0003 20.251'
+                        stroke='white'
+                        strokeWidth='2.50185'
+                        strokeMiterlimit='10'
+                      />
+                      <path
+                        id='Vector_7'
+                        d='M55.0002 26.251C57.0713 26.251 58.7502 24.572 58.7502 22.501C58.7502 20.4299 57.0713 18.751 55.0002 18.751C52.9292 18.751 51.2502 20.4299 51.2502 22.501C51.2502 24.572 52.9292 26.251 55.0002 26.251Z'
+                        stroke='white'
+                        strokeWidth='2.50185'
+                        strokeMiterlimit='10'
+                      />
+                      <path
+                        id='Vector_8'
+                        d='M55.0003 32.5005V52.5005H5.00031V25.0005'
+                        stroke='white'
+                        strokeWidth='2.50185'
+                        strokeMiterlimit='10'
+                      />
+                      <path
+                        id='Vector_9'
+                        d='M20.0002 52.5005V38.7505'
+                        stroke='white'
+                        strokeWidth='2.50185'
+                        strokeMiterlimit='10'
+                      />
+                      <path
+                        id='Vector_10'
+                        d='M40.0005 52.5007V21.2507'
+                        stroke='white'
+                        strokeWidth='2.50185'
+                        strokeMiterlimit='10'
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id='clip0_202_187'>
+                        <rect width='60' height='60' fill='white' />
+                      </clipPath>
+                    </defs>
+                  </svg>
+            </div>
             <div className='row p-3'>
               <div className='col-sm mb-2 p-3'>
                 <div className='row advice-icon justify-content-center p-2'>
@@ -459,7 +550,7 @@ const Content = () => {
                     </g>
                   </svg>
                 </div>
-                <div className='row advice-text justify-content-center'>
+                <div className='row advice-text justify-content-center p-2'>
                   Increase calories to gain weight
                 </div>
               </div>
