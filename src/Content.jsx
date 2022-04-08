@@ -2,7 +2,12 @@ import React from 'react';
 /** @jsx jsx */
 import { jsx, css, keyframes } from '@emotion/react';
 import FoodFruits from './assets/food1_shadow.png';
-import MetaRate from './assets/metaRate.svg';
+import MetaRateIcon from './assets/metaRate.svg';
+import ActivityIcon from './assets/Dumbbell.svg';
+import FoodIcon from './assets/Lemonade.svg';
+import JournalIcon from './assets/Documents.svg';
+import GainWeightIcon from './assets/ProgressUp.svg';
+import LoseWeightIcon from './assets/ProgressDown.svg';
 
 const trackingIn = keyframes`
   0% {
@@ -15,16 +20,13 @@ const trackingIn = keyframes`
   }
 `;
 const getStarted = css`
-  background-color: #FAE077;
+  background-color: #72C166;
 `;
 const iconAbout = css`
   width: 75px;
   height: 75px;
-  align-content: center;
-  background-color: #C1E6B8;
-  align-items: center;
-  justify-content: center;
-  border-radius: 30%;
+  background-color: #D5D8A3;
+  border-radius: 25%;
 `;
 const backText = css`
   color: transparent;
@@ -35,12 +37,11 @@ const backText = css`
 
 const titleDescription = css`
   color: #FFF9D4;
-  
   text-shadow: 2px 5px #0000;
 `;
 
 const iconDescription = css`
-  color: #FFF9D4;
+  color: #ffff;
   justify-content: center;
 `;
 
@@ -48,7 +49,7 @@ const Content = () => {
   return (
     <div className='container d-flex flex-column justify-content-center align-items-center'>
       <div className='container justify-content-center text-center'>
-        <h1 css={backText}>BasalMetabolicRate</h1>
+        {/* <h1 css={backText}>BasalMetabolicRate</h1> */}
         <div className='col'>
           <div className='row mt-5 py-5 align-items-center justify-content-center'>
             <div className='col-md-4'>
@@ -68,7 +69,7 @@ const Content = () => {
                   className='btn mt-3 px-5 shadow-sm rounded-pill'
                   css={getStarted}
                 >
-                  Get Started
+                  GET STARTED
                 </button>
               </div>
             </div>
@@ -79,48 +80,62 @@ const Content = () => {
 
               <div className='col-sm mb-2 p-3'>
                 <div className='row justify-content-center p-2'>
-                  <div className='card shadow-sm' css={iconAbout}>
-                  <img src={MetaRate} alt='metaRate' />
-                  </div>
+                  <img className="img-thumbnail shadow-sm" src={MetaRateIcon} css={iconAbout} alt='metaRate' />
                 </div>
-                <div className='row mt-3' css={iconDescription}>
+                <div className='row mt-3 fs-5' css={iconDescription}>
                   Calculate your Basal Metabolic Rate
                 </div>
               </div> 
 
               <div className='col-sm mb-2 p-3'>
-                <div className='row advice-icon justify-content-center p-2'></div>
-                <div className='row advice-text justify-content-center'>
+                <div className='row justify-content-center p-2'>
+                  <img className="img-thumbnail shadow-sm" src={ActivityIcon} css={iconAbout} alt='metaRate' />
+                </div>
+                <div className='row mt-3 fs-5' css={iconDescription}>
                   Adjust your BMR to include physical activity
                 </div>
               </div>
+
               <div className='col-sm mb-2 p-3'>
-                <div className='row advice-icon justify-content-center p-2'></div>
-                <div className='row advice-text justify-content-center'>
+                <div className='row justify-content-center p-2'>
+                  <img className="img-thumbnail shadow-sm" src={FoodIcon} css={iconAbout} alt='metaRate' />
+                </div>
+                <div className='row mt-3 fs-5' css={iconDescription}>
                   Choose your food based on daily calorie needs
                 </div>
               </div>
+
             </div>
 
             <div className='row'>
+
               <div className='col-sm mb-2 p-3'>
-                <div className='row advice-icon justify-content-center p-2'></div>
-                <div className='row advice-text justify-content-center p-2'>
+                <div className='row justify-content-center p-2'>
+                  <img className="img-thumbnail shadow-sm" src={JournalIcon} css={iconAbout} alt='metaRate' />
+                </div>
+                <div className='row mt-3 fs-5' css={iconDescription}>
                   Start a food journal
                 </div>
               </div>
+
               <div className='col-sm mb-2 p-3'>
-                <div className='row advice-icon justify-content-center p-2'></div>
-                <div className='row advice-text justify-content-center p-2'>
+                <div className='row justify-content-center p-2'>
+                  <img className="img-thumbnail shadow-sm" src={GainWeightIcon} css={iconAbout} alt='metaRate' />
+                </div>
+                <div className='row mt-3 fs-5' css={iconDescription}>
                   Cut calories to lose weight
                 </div>
               </div>
+
               <div className='col-sm mb-2 p-3'>
-                <div className='row advice-icon justify-content-center p-2'></div>
-                <div className='row advice-text justify-content-center p-2'>
+                <div className='row justify-content-center p-2'>
+                  <img className="img-thumbnail shadow-sm" src={LoseWeightIcon} css={iconAbout} alt='metaRate' />
+                </div>
+                <div className='row mt-3 fs-5' css={iconDescription}>
                   Increase calories to gain weight
                 </div>
               </div>
+
             </div>
           </div>
         </div>
