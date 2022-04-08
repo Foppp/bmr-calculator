@@ -2,7 +2,6 @@
 import path from 'path';
 import fs from 'fs';
 import fastify from 'fastify';
-import { CacheProvider } from '@emotion/react';
 import { renderToString } from 'react-dom/server';
 import React from 'react';
 import App from '../src/App.jsx';
@@ -16,8 +15,8 @@ const bootstrapSDNscript = '<script src="https://cdn.jsdelivr.net/npm/bootstrap@
 
 const setupViews = (app) => {
   app.register(fastifyStatic, {
-    root: path.join(__dirname, '../public'),
-    prefix: '/public/',
+    root: path.join(__dirname, '../dist/assets/'),
+    prefix: '/assets/',
   });
 };
 
