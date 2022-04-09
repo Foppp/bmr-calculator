@@ -8,6 +8,7 @@ import FoodIcon from './assets/Lemonade.svg';
 import JournalIcon from './assets/Documents.svg';
 import GainWeightIcon from './assets/ProgressUp.svg';
 import LoseWeightIcon from './assets/ProgressDown.svg';
+import Calculator from './Calculator.jsx';
 
 const trackingIn = keyframes`
   0% {
@@ -20,12 +21,12 @@ const trackingIn = keyframes`
   }
 `;
 const getStarted = css`
-  background-color: #72C166;
+  background-color: #FAE077; 
 `;
 const iconAbout = css`
   width: 75px;
   height: 75px;
-  background-color: #D5D8A3;
+  background-color: #C1E6B8;
   border-radius: 25%;
 `;
 const backText = css`
@@ -49,22 +50,21 @@ const Content = () => {
   return (
     <div className='container d-flex flex-column justify-content-center align-items-center'>
       <div className='container justify-content-center text-center'>
-        {/* <h1 css={backText}>BasalMetabolicRate</h1> */}
         <div className='col'>
-          <div className='row mt-5 py-5 align-items-center justify-content-center'>
+          <div className='row mt-2 align-items-center justify-content-center'>
             <div className='col-md-4'>
               <img className='img-fluid' src={FoodFruits} alt='food1' />
             </div>
             <div className='col-md-8'>
-              <h1 className='text-white mt-2 title-text'>
+              <h1 className='text-white my-5 title-text'>
                 Find out your daily calorie need and choose the right meal
               </h1>
-              <h5 className='mt-2' css={titleDescription}>
+              <h5 className='my-5' css={titleDescription}>
                 Our bodies are like engines that are constantly running. They're
                 always burning fuel or calories (even during sleep). BMR is the
                 number of calories you burn each day simply by being alive.
               </h5>
-              <div className='col'>
+              <div className='col my-5'>
                 <button
                   className='btn mt-3 px-5 shadow-sm rounded-pill'
                   css={getStarted}
@@ -135,9 +135,9 @@ const Content = () => {
                   Increase calories to gain weight
                 </div>
               </div>
-
             </div>
           </div>
+          <Calculator />
         </div>
       </div>
     </div>

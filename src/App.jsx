@@ -4,6 +4,7 @@ import { jsx, css, keyframes } from '@emotion/react';
 import Navbar from './Navbar.jsx';
 import Content from './Content.jsx';
 import Footer from './Footer.jsx';
+import Calculator from './Calculator.jsx';
 
 // const bounce = keyframes`
 //   from, 20%, 53%, 80%, to {
@@ -41,7 +42,8 @@ const App = () => {
     <div className='main'>
       <div css={vectorCss} className="container-fluid px-0">
         <Navbar />
-        <Content />
+        {/* <Content /> */}
+        <Calculator />
         <Footer />
       </div>
 

@@ -1,11 +1,19 @@
 import React from 'react';
+/** @jsx jsx */
+import { jsx, css, keyframes } from '@emotion/react';
+import BmrLogo from './assets/BMR-logos_white.png';
+
+const bmrLogoStyle = css`
+  height: 45px;
+  width: 125px;
+`;
 
 const Navbar = () => {
   return (
-    <nav className='navbar navbar-expand-md navbar-dark bg-transparent shadow-sm'>
+    <nav className='navbar navbar-expand-md bg-transparent navbar-dark shadow-sm'>
       <div className='container'>
         <a className='navbar-brand' href='#'>
-          Navbar
+          <img src={BmrLogo} alt='logo' css={bmrLogoStyle} />
         </a>
         <button
           className='navbar-toggler'

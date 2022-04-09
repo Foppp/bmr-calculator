@@ -1,8 +1,19 @@
+/** @jsx jsx */
+
 import React from 'react';
+import { jsx, css, keyframes } from '@emotion/react';
+
+const footerStyles = css`
+  background-color: #fff9d4;
+`;
 
 const Footer = () => {
   return (
-    <div className='footer fixed-bottom mt-auto bg-transparent'>Footer</div>
+    <div className='container'>
+      <footer class='d-flex justify-content-center align-items-center border-top'>
+        <p class='text-center text-muted my-3'>© 2022 BMR Calculator, Inc</p>
+      </footer>
+    </div>
   );
 };
 

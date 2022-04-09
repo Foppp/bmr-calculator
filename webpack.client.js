@@ -14,9 +14,16 @@ module.exports = {
     main: './src/index.js',
   },
   output: {
+    filename: "bondle.js",
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/assets/',
+    publicPath: '/dist/',
   },
+  plugins: [
+    // new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+    }),
+  ],
   //   // new Dotenv({
   //   //   path: path.resolve(__dirname,'.env')
   //   // }),
