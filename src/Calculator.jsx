@@ -5,7 +5,7 @@ import AgeInput from './components/AgeInput.jsx';
 import HeigthInput from './components/HeigthInput.jsx';
 import WeightInput from './components/WeightInput.jsx';
 
-const imputSteps = [
+const inputSteps = [
   { id: 1, name: 'Age', active: true },
   { id: 2, name: 'Height', active: false },
   { id: 3, name: 'Weight', active: false },
@@ -19,27 +19,27 @@ const forms = {
 
 const Calculator = () => {
   const [activeFormId, setActiveFormId] = useState(1);
-  // const FormComponent = forms[activeFormId];
+  const FormComponent = forms[activeFormId];
 
-  // const nextStep = (steps) => {
-  //   const step = activeFormId < steps.length ? activeFormId + 1 : activeFormId;
-  //   setActiveFormId(step);
-  // };
+  const nextStep = () => {
+    const step = activeFormId < inputSteps.length ? activeFormId + 1 : activeFormId;
+    setActiveFormId(step);
+  };
 
-  // const prevStep = (steps) =>
-  //   activeFormId === 1
-  //     ? setActiveFormId(activeFormId)
-  //     : setActiveFormId(activeFormId - 1);
+  const prevStep = () => {
+    const step = activeFormId === 1 ? activeFormId : activeFormId - 1;
+    setActiveFormId(step);
+  }
 
   return (
     <div className='container'>
-      {/* <FormComponent /> */}
-      <button className='btn btn-primary' onClick={() => setActiveFormId(activeFormId + 1)}>
+      <FormComponent />
+      <button className='btn btn-primary' onClick={prevStep}>
         Prev
       </button>
       <button
         className='btn btn-secondary'
-        onClick={() => setActiveFormId(activeFormId - 1)}
+        onClick={nextStep}
       >
         Next
       </button>
