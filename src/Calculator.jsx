@@ -22,28 +22,37 @@ const Calculator = () => {
   const FormComponent = forms[activeFormId];
 
   const nextStep = () => {
-    const step = activeFormId < inputSteps.length ? activeFormId + 1 : activeFormId;
+    const step =
+      activeFormId < inputSteps.length ? activeFormId + 1 : activeFormId;
     setActiveFormId(step);
   };
 
   const prevStep = () => {
     const step = activeFormId === 1 ? activeFormId : activeFormId - 1;
     setActiveFormId(step);
-  }
+  };
 
   return (
-    <div className='container'>
-      <FormComponent />
-      <button className='btn btn-primary' onClick={prevStep}>
-        Prev
-      </button>
-      <button
-        className='btn btn-secondary'
-        onClick={nextStep}
-      >
-        Next
-      </button>
-      <p>{activeFormId}</p>
+    <div className='container p-5 shadow-lg' >
+      <div className='col'>
+        <div className='row'>
+          <FormComponent />
+        </div>
+        <div className='row mt-5'>
+          <div className='col'>
+            {activeFormId !== 1 && (
+              <button className='btn btn-primary' onClick={prevStep}>
+                Prev
+              </button>
+            )}
+          </div>
+          <div className='col'>
+            <button className='btn btn-secondary float-end' onClick={nextStep}>
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

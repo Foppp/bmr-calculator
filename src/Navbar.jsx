@@ -1,5 +1,7 @@
-import React from 'react';
 /** @jsx jsx */
+
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { jsx, css, keyframes } from '@emotion/react';
 
 const bmrLogoStyle = css`
@@ -9,11 +11,12 @@ const bmrLogoStyle = css`
 
 const Navbar = () => {
   return (
+    <>
     <nav className='navbar navbar-expand-md bg-transparent navbar-dark shadow-sm'>
       <div className='container'>
-        <a className='navbar-brand' href='#'>
+        <Link className='navbar-brand' to='/'>
           <img src='./assets/BMR-logos_white.png' alt='logo' css={bmrLogoStyle} />
-        </a>
+        </Link>
         <button
           className='navbar-toggler'
           type='button'
@@ -28,24 +31,25 @@ const Navbar = () => {
         <div className='collapse navbar-collapse justify-content-center' id='navbarTogglerDemo02'>
           <ul className='navbar-nav mb-lg-0'>
             <li className='nav-item'>
-              <a className='nav-link active' aria-current='page' href='#'>
+              <Link className='nav-link active' aria-current='page' to='/' >
                 Home
-              </a>
+              </Link>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' style={{color: '#56B9F7FC'}} href='#'>
+              <Link className='nav-link' style={{color: '#56B9F7FC'}} to='/calculator'>
                 Calculator
-              </a>
+              </Link>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='#'>
+              <Link className='nav-link' to='/about'>
                 About
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    </>
   );
 };
 

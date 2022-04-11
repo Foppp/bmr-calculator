@@ -2,6 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import fastify from 'fastify';
 import { renderToString } from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom/server';
 import React from 'react';
 import App from '../src/App.jsx';
 import fastifyStatic from 'fastify-static';
@@ -31,7 +32,11 @@ const start = async (app) => {
   setupViews(app);
   app.get('*', async (req, res) => {
     const indexFile = path.resolve('./dist/index.html');
-    const appHtml = renderToString(<App />);
+    const appHtml = renderToString(
+      <StaticRouter location={req.url}>
+        <App />
+      </StaticRouter>
+    );
     fs.readFile(indexFile, 'utf-8', (err, data) => {
       if (err) {
         console.error('Something went wrong:', err);
@@ -41,7 +46,10 @@ const start = async (app) => {
         .status(200)
         .header('Content-Type', 'text/html')
         .send(
-          data.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
+          data.replace(
+            '<div id="root"></div>',
+            `<div id="root">${appHtml}</div>`
+          )
         );
     });
   });

@@ -1,5 +1,6 @@
-import React from 'react';
 /** @jsx jsx */
+
+import React from 'react';
 import { jsx, css, keyframes } from '@emotion/react';
 import FoodFruits from './assets/food1_shadow.png';
 import MetaRateIcon from './assets/metaRate.svg';
@@ -46,7 +47,7 @@ const iconDescription = css`
   justify-content: center;
 `;
 
-const Content = () => {
+const Main = () => {
   return (
     <div className='container d-flex flex-column justify-content-center align-items-center'>
       <div className='container justify-content-center text-center'>
@@ -64,14 +65,7 @@ const Content = () => {
                 always burning fuel or calories (even during sleep). BMR is the
                 number of calories you burn each day simply by being alive.
               </h5>
-              <div className='col my-5'>
-                <button
-                  className='btn mt-3 px-5 shadow-sm rounded-pill'
-                  css={getStarted}
-                >
-                  GET STARTED
-                </button>
-              </div>
+              
             </div>
           </div>
           <div className='row align-items-center justify-content-center mb-5 mt-5'>
@@ -137,6 +131,14 @@ const Content = () => {
               </div>
             </div>
           </div>
+          <div className='col my-5'>
+                <button
+                  className='btn mt-3 px-5 shadow-sm rounded-pill'
+                  css={getStarted}
+                >
+                  GET STARTED
+                </button>
+              </div>
           <Calculator />
         </div>
       </div>
@@ -144,4 +146,4 @@ const Content = () => {
   );
 };
 
-export default Content;
+export default Main;
