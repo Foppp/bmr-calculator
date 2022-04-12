@@ -34,7 +34,9 @@ const Calculator = () => {
 
   return (
     <div className='container p-5 shadow-lg' >
-      <div className='col'>
+                <FormComponent />
+
+      {/* <div className='col'>
         <div className='row'>
           <FormComponent />
         </div>
@@ -52,7 +54,7 @@ const Calculator = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
