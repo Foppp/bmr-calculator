@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { jsx, css, keyframes } from '@emotion/react';
-
+import brandLogo from './assets/BMR-logos_white.png'
 const bmrLogoStyle = css`
   height: 45px;
   width: 125px;
@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className='navbar navbar-expand-md bg-transparent navbar-dark shadow-sm'>
       <div className='container'>
         <Link className='navbar-brand' to='/'>
-          <img src='./assets/BMR-logos_white.png' alt='logo' css={bmrLogoStyle} />
+          <img src={brandLogo} alt='logo' css={bmrLogoStyle} />
         </Link>
         <button
           className='navbar-toggler'
