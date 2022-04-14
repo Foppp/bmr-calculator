@@ -34,6 +34,9 @@ const Calculator = () => {
 
   return (
     <div className='container pt-3'>
+      <h2 className='text-center text-warning mt-3'>
+        Basal Metabolic Rate Calculator
+      </h2>
       <div className='row'>
         <div className='col-md form-container d-flex flex-column justify-content-around'>
           <div className='form-header text-center py-3'>
@@ -45,18 +48,18 @@ const Calculator = () => {
             </h4>
           </div>
           <div className='form-header2 text-center'>
-            <h6 className='text-light'>
+            <h5 className='text-light'>
               Our Basal Metabolic Rate (BMR) can vary based on your age, sex,
               size, and genetics.To get an accurate picture of the amount of
-              calories you burn per day, start by calculating a value for your
-              BMR.
-            </h6>
+              calories you burn per day, start by calculating a value htmlFor
+              your BMR.
+            </h5>
           </div>
         </div>
         <div className='col-md'>
           <div className='row px-2'>
-            <form className='row g-3'>
-              <div className='col-12 d-flex justify-content-around'>
+            {/* <form className='row g-3'>
+              <div className='col-12 d-flex justify-content-around mb-3'>
                 <div className='radio-button-male'>
                   <input
                     type='radio'
@@ -93,63 +96,77 @@ const Calculator = () => {
                 </div>
               </div>
 
-              <div className='col-md-4 col-sm-3'>
-                <label htmlFor='inputCity' className='form-label'>
-                  Age
-                </label>
-                <input type='text' className='form-control' id='inputCity' />
+              <div className='form-floating col-md-4 col-sm-3 my-3'>
+                <input
+                  type='text'
+                  className='form-control'
+                  id='floatingInput'
+                  placeholder='Age'
+                />
+                <label htmlFor='floatingInput'>Age</label>
               </div>
 
-              <div className='col-md-4 col-sm-3'>
-                <label htmlFor='inputCity' className='form-label'>
-                  Height
-                </label>
-                <input type='text' className='form-control' id='inputCity' />
+              <div className='form-floating col-md-4 col-sm-3 my-3'>
+                <input
+                  type='text'
+                  className='form-control'
+                  id='floatingInput'
+                  placeholder='Height'
+                />
+                <label htmlFor='floatingInput'>Height</label>
               </div>
 
-              <div className='col-md-4 col-sm-3'>
-                <label htmlFor='inputCity' className='form-label'>
-                  Weight
-                </label>
-                <input type='text' className='form-control' id='inputCity' />
+              <div className='form-floating col-md-4 col-sm-3 my-3'>
+                <input
+                  type='text'
+                  className='form-control'
+                  id='floatingInput'
+                  placeholder='weight'
+                />
+                <label htmlFor='floatingInput'>Weight</label>
               </div>
 
-              <div className='col-md-12 col-sm-3'>
-                <label htmlFor='inputState' className='form-label'>
-                  Exercises
-                </label>
+              <div className='form-floating col-md-12 col-sm-3 mb-3'>
                 <select
-                  id='inputState'
                   className='form-select'
+                  id='floatingSelect'
                   defaultValue={1}
+                  aria-label='Floating label select example'
                 >
-                  <option value='1' disabled>
-                    Choose...
-                  </option>
-                  <option value='2'>1</option>
+                  <option value='1'>One</option>
+                  <option value='2'>Two</option>
+                  <option value='3'>Three</option>
                 </select>
+                <label htmlFor='floatingSelect'>Activity</label>
               </div>
-              <button type='submit' className='btn btn-warning rounded-pill'>Calculate</button>
-            </form>
-          </div>
-          {/* <div className='row mt-5'>
-            <div className='col'>
-              {activeFormId !== 1 && (
-                <button className='btn btn-primary' onClick={prevStep}>
-                  Prev
-                </button>
-              )}
-            </div>
-            <div className='col'>
               <button
-                className='btn btn-secondary float-end'
-                onClick={nextStep}
+                type='submit'
+                className='btn btn-warning rounded-pill py-2'
               >
-                Next
+                Calculate
               </button>
-            </div>
-          </div> */}
+            </form> */}
+          </div>
         </div>
+      </div>
+      <div className='row mt-5 p-2'>
+        <h4 className='text-light text-center'>
+          Whether a person gains or loses weight is determined by whether they
+          eat more or less calories per day than they expend through daily
+          activities. Knowing how to calculate the number of calories you burn
+          per day can help you maintain a healthy weight or track your exercise
+          progress. There are a variety of ways to calculate how many calories
+          you burn in a day. In addition, you can use this information to help
+          you lose weight, gain weight, maintain your weight or just get more
+          detailed information on your body's specific needs.
+        </h4>
+        <h5 className='text-light text-center mt-3'>
+          Start a food journal. It will be useful to track your total calorie
+          intake using a food journal, food journaling app or website. This will
+          help you manipulate your predetermined caloric goal to result in any
+          desired weight changes. It can also help keep you accountable to your
+          diet plan.
+        </h5>
       </div>
     </div>
   );

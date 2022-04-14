@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { jsx, css, keyframes } from '@emotion/react';
+import { Link } from 'react-router-dom';
 import FoodFruits from './assets/food1_shadow.png';
 import MetaRateIcon from './assets/metaRate.svg';
 import ActivityIcon from './assets/Dumbbell.svg';
@@ -10,6 +11,7 @@ import JournalIcon from './assets/Documents.svg';
 import GainWeightIcon from './assets/ProgressUp.svg';
 import LoseWeightIcon from './assets/ProgressDown.svg';
 import Calculator from './Calculator.jsx';
+import Modal from './Modal.jsx';
 
 const trackingIn = keyframes`
   0% {
@@ -21,15 +23,16 @@ const trackingIn = keyframes`
     opacity: 25%;
   }
 `;
-const getStarted = css`
-  background-color: #FAE077; 
-`;
+// const getStarted = css`
+//   background-color: #fae077;
+// `;
 const iconAbout = css`
   width: 75px;
   height: 75px;
-  background-color: #C1E6B8;
+  background-color: #FFF3A4;
   border-radius: 25%;
 `;
+
 const backText = css`
   color: transparent;
   font-size: calc(4vw + 2vh + 2vmin);
@@ -38,7 +41,7 @@ const backText = css`
 `;
 
 const titleDescription = css`
-  color: #FFF9D4;
+  color: #fff9d4;
   text-shadow: 2px 5px #0000;
 `;
 
@@ -65,25 +68,32 @@ const Main = () => {
                 always burning fuel or calories (even during sleep). BMR is the
                 number of calories you burn each day simply by being alive.
               </h5>
-              
             </div>
           </div>
           <div className='row align-items-center justify-content-center mb-5 mt-5'>
-
             <div className='row'>
-
               <div className='col-sm mb-2 p-3'>
                 <div className='row justify-content-center p-2'>
-                  <img className="img-thumbnail shadow-sm" src={MetaRateIcon} css={iconAbout} alt='metaRate' />
+                  <img
+                    className='img-thumbnail shadow-sm'
+                    src={MetaRateIcon}
+                    css={iconAbout}
+                    alt='metaRate'
+                  />
                 </div>
                 <div className='row mt-3 fs-5' css={iconDescription}>
                   Calculate your Basal Metabolic Rate
                 </div>
-              </div> 
+              </div>
 
               <div className='col-sm mb-2 p-3'>
                 <div className='row justify-content-center p-2'>
-                  <img className="img-thumbnail shadow-sm" src={ActivityIcon} css={iconAbout} alt='metaRate' />
+                  <img
+                    className='img-thumbnail shadow-sm'
+                    src={ActivityIcon}
+                    css={iconAbout}
+                    alt='metaRate'
+                  />
                 </div>
                 <div className='row mt-3 fs-5' css={iconDescription}>
                   Adjust your BMR to include physical activity
@@ -92,20 +102,28 @@ const Main = () => {
 
               <div className='col-sm mb-2 p-3'>
                 <div className='row justify-content-center p-2'>
-                  <img className="img-thumbnail shadow-sm" src={FoodIcon} css={iconAbout} alt='metaRate' />
+                  <img
+                    className='img-thumbnail shadow-sm'
+                    src={FoodIcon}
+                    css={iconAbout}
+                    alt='metaRate'
+                  />
                 </div>
                 <div className='row mt-3 fs-5' css={iconDescription}>
                   Choose your food based on daily calorie needs
                 </div>
               </div>
-
             </div>
 
             <div className='row'>
-
               <div className='col-sm mb-2 p-3'>
                 <div className='row justify-content-center p-2'>
-                  <img className="img-thumbnail shadow-sm" src={JournalIcon} css={iconAbout} alt='metaRate' />
+                  <img
+                    className='img-thumbnail shadow-sm'
+                    src={JournalIcon}
+                    css={iconAbout}
+                    alt='metaRate'
+                  />
                 </div>
                 <div className='row mt-3 fs-5' css={iconDescription}>
                   Start a food journal
@@ -114,7 +132,12 @@ const Main = () => {
 
               <div className='col-sm mb-2 p-3'>
                 <div className='row justify-content-center p-2'>
-                  <img className="img-thumbnail shadow-sm" src={GainWeightIcon} css={iconAbout} alt='metaRate' />
+                  <img
+                    className='img-thumbnail shadow-sm'
+                    src={LoseWeightIcon}
+                    css={iconAbout}
+                    alt='metaRate'
+                  />
                 </div>
                 <div className='row mt-3 fs-5' css={iconDescription}>
                   Cut calories to lose weight
@@ -123,7 +146,12 @@ const Main = () => {
 
               <div className='col-sm mb-2 p-3'>
                 <div className='row justify-content-center p-2'>
-                  <img className="img-thumbnail shadow-sm" src={LoseWeightIcon} css={iconAbout} alt='metaRate' />
+                  <img
+                    className='img-thumbnail shadow-sm'
+                    src={GainWeightIcon}
+                    css={iconAbout}
+                    alt='metaRate'
+                  />
                 </div>
                 <div className='row mt-3 fs-5' css={iconDescription}>
                   Increase calories to gain weight
@@ -132,14 +160,11 @@ const Main = () => {
             </div>
           </div>
           <div className='col my-5'>
-                <button
-                  className='btn mt-3 px-5 shadow-sm rounded-pill'
-                  css={getStarted}
-                >
-                  GET STARTED
-                </button>
-              </div>
-          <Calculator />
+            <Modal />
+            {/* <Link to='/calculator' className='btn btn-warning mt-3 px-5 shadow-sm rounded-pill'>
+              GET STARTED
+            </Link> */}
+          </div>
         </div>
       </div>
     </div>
